@@ -1,4 +1,5 @@
-import {Foo} from './foo.js';
+import {Works} from './works';
+import {DoesNotWork} from './does-not-work';
 
-const foo = new Foo();
-console.log(foo.bar);
+console.log(Works.foo);
+console.log(DoesNotWork.foo);

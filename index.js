@@ -161,22 +161,40 @@ var defineProperty = function (obj, key, value) {
   return obj;
 };
 
-var Foo = function () {
-    function Foo() {
-        classCallCheck(this, Foo);
+var Works = function () {
+    function Works() {
+        classCallCheck(this, Works);
     }
 
-    createClass(Foo, [{
-        key: 'bar',
+    createClass(Works, null, [{
+        key: 'foo',
         get: function get$$1() {
-            var key = 'key';
-            return defineProperty({}, key, 'value');
+            var key1 = 'key1';
+            return defineProperty({}, key1, 'value1');
         }
     }]);
-    return Foo;
+    return Works;
 }();
 
-var foo = new Foo();
-console.log(foo.bar);
+var DoesNotWork = function () {
+    function DoesNotWork() {
+        classCallCheck(this, DoesNotWork);
+    }
+
+    createClass(DoesNotWork, null, [{
+        key: 'foo',
+        get: function get$$1() {
+            var _ref;
+
+            var key1 = 'key1';
+            var key2 = 'key2';
+            return _ref = {}, babelHelpers.defineProperty(_ref, key1, 'value1'), babelHelpers.defineProperty(_ref, key2, 'value2'), _ref;
+        }
+    }]);
+    return DoesNotWork;
+}();
+
+console.log(Works.foo);
+console.log(DoesNotWork.foo);
 
 }());
