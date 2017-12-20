@@ -5,23 +5,20 @@
   "main": "index.js",
   "scripts": {
     "build": "gulp",
+    "build:rollup": "rollup src/index.js --o index.js --f iife",
     "start": "node index.js"
   },
   "keywords": [
     "Gulp",
-    "Rollup",
-    "Babel"
+    "Rollup"
   ],
   "author": "Mikolaj Stankowiak",
   "license": "MIT",
   "private": true,
   "devDependencies": {
-    "babel-core": "^6.26.0",
-    "babel-plugin-external-helpers": "^6.22.0",
-    "babel-preset-env": "^1.6.1",
     "gulp": "^3.9.1",
     "gulp-better-rollup": "^2.0.0",
     "gulp-load-plugins": "^1.5.0",
-    "rollup-plugin-babel": "^3.0.3"
+    "rollup": "^0.50.0"
   }
 }
