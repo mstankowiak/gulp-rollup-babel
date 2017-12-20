@@ -1,7 +1,7 @@
-import * as classes from './does-not-work';
+import * as classes from './works';
 
 function value() {
-    return true, classes.DoesNotWork.foo;
+    return true, classes.Works.foo;
 }
 
 console.log(value());
