@@ -1,0 +1,27 @@
+{
+  "name": "gulp-rollup-babel",
+  "version": "1.0.0",
+  "description": "A test configuration of build system based on Gulp+Rollup+Babel",
+  "main": "index.js",
+  "scripts": {
+    "build": "gulp",
+    "start": "node index.js"
+  },
+  "keywords": [
+    "Gulp",
+    "Rollup",
+    "Babel"
+  ],
+  "author": "Mikolaj Stankowiak",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-preset-env": "^1.6.1",
+    "gulp": "^3.9.1",
+    "gulp-better-rollup": "^2.0.0",
+    "gulp-load-plugins": "^1.5.0",
+    "rollup-plugin-babel": "^3.0.3"
+  }
+}
