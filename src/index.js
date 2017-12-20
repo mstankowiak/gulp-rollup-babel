@@ -1,5 +1,7 @@
-import {Works} from './works';
-import {DoesNotWork} from './does-not-work';
+import * as classes from './does-not-work';
 
-console.log(Works.foo);
-console.log(DoesNotWork.foo);
+function value() {
+    return true, classes.DoesNotWork.foo;
+}
+
+console.log(value());
